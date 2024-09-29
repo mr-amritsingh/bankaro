@@ -1,0 +1,272 @@
+body{
+  background: #0F0F0F;
+}
+.App {
+  /* text-align: center; */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+p, h1, h2, h5{
+  color: white;
+}
+/* img{
+  width: 100%;
+} */
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999 !important;
+  backdrop-filter: blur(124px);
+  /* background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(54, 51, 51)) !important; */
+  color:  white !important;
+  height: 80px;
+}
+
+.nav-border{
+  width: 100%;
+  position: fixed;
+  top: 80px;
+  height: 2px;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(204, 199, 199), rgb(0, 0, 0)) !important;
+}
+
+/* .header{
+  width: 100%;
+  height: 82px;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  padding-bottom: 2px;
+  border: 1.33px solid;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(204, 199, 199), rgb(0, 0, 0)) !important;
+} */
+
+
+
+.heading{
+  font-size: 28px;
+  background: linear-gradient(to right, #393838, #e7e4e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link{
+  color: white !important;
+}
+.navbar-brand{
+  color: white;
+}
+
+.gradient-btn {
+  /* padding: 20px 60px; */
+  color: #E4C2A2;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  background: linear-gradient(to top, rgb(47, 46, 46), white);
+  cursor: pointer;
+  padding: 10px;
+
+}
+.gradient-btn::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  bottom: 2.16px;
+  border-radius: 4px;
+  background: linear-gradient(to top, #4f4338, rgb(12, 12, 12));
+  z-index: -1;
+  transition: 200ms;
+  color: #E4C2A2;
+}
+.gradient-btn::after {
+  content: attr(data);
+  font-size: 16px;
+  background: linear-gradient(to top, rgb(47, 46, 46), white);
+  transition: 200ms;
+  color: white;
+}
+
+.profile-picture{
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+  border-image: linear-gradient(to top, rgb(47, 46, 46), white);
+}
+
+.find-best-container{
+  background-image: radial-gradient(75.73% 238.9% at 100% 60.92%, rgba(181, 169, 169, 0) 54.75%, #1A1A1A 85.72%, #131313 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.find-best{
+  border-bottom: 2px solid white;
+    border-image-slice: 1;
+    border-bottom-left-radius: 120px;
+    border-bottom-right-radius: 120px;
+    background-image: url('../public/abstract-black.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 0px 10px 40px 0px #fec158
+}
+.text-muted{
+  color: #B1B1B1 !important;
+}
+
+.popular-cards{
+  background-image: url('../public/RightSquare.svg'), url('../public/leftSquare.svg');
+  background-position: right, left;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain;
+
+}
+
+.popular-cards-button{
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  color: white;
+  background: linear-gradient(to bottom, #fafcfb, transparent);
+  cursor: pointer;
+}
+
+.popular-cards-button::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  border-radius: 4px;
+  background-color: black;
+  z-index: -1;
+  transition: 200ms
+}
+
+
+.popular-cards-button:hover::before{
+  background: white !important;
+}
+.popular-cards-button:hover{
+  color: black;
+}
+
+.popular-cards-options{
+    color: #E9D9AF
+}
+
+.card-category-btn{
+  background: linear-gradient(200.74deg, rgba(214, 211, 194, 0.2) 0%, rgba(92, 92, 92, 0.14) 100%);
+  border: 0px !important;
+  color: #E9D9AF
+}
+
+.flash{
+  width: 800px;
+    height: 400px;
+    position: absolute;
+    left: 22%;
+    bottom: 19%;
+    background: radial-gradient(farthest-side at bottom, #d1bb9a, #0000);
+    z-index: 0;
+    -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 90deg, #0000 91deg)
+}
+
+.flash-inner{
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  left: 29%;
+  bottom: 13%;
+  background: radial-gradient(farthest-side at bottom, #d1bb9a, #0000);
+  z-index: 0;
+  -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 90deg, #0000 91deg)
+}
+
+.loung-flash{
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 0%;
+  bottom: 65%;
+  background: radial-gradient(farthest-side at bottom, #817051, #0000);
+  z-index: 0;
+  -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 90deg, #0000 91deg)
+}
+
+.styled-text {
+  font-size: 100px;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(180deg, #000000 46.48%, #D1AD83 87.23%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.5px #f0e68c;
+  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6), 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.eclipse{
+  width: 100%;
+  position: absolute;
+  background-color: #0F0F0F;
+  height: 70px;
+  top: 21%;
+  z-index: 0;
+  border-radius: 100%;
+}
+.styled-image{
+  width: 100%;
+  /* shape-outside: ellipse(40% 50% at left); */
+}
+
+.lounge-finder{
+  background-image: url('../public//Map\ Black&White.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
